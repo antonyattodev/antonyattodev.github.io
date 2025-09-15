@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>¡Feliz 21 Cumpleaños, Mi Amor!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #ffebee;
+            color: #4a4a4a;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url('images/fondo3.png');
+            background-repeat: repeat;
+            background-size: 80px;
+        }
+        .carta {
+            background-color: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 700px;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #f8bbd0;
+        }
+        .hello-kitty-corner {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 120px;
+            transform: rotate(-15deg);
+            z-index: 1;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+        .hello-kitty-corner-bottom {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            width: 120px;
+            transform: rotate(15deg) scaleX(-1);
+            z-index: 1;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+        h1 {
+            font-family: 'Pacifico', cursive;
+            color: #e91e63;
+            font-size: 3.8em;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
+        }
+        h1 span {
+            color: #333;
+            font-size: 0.8em;
+            vertical-align: super;
+        }
+        .subtitulo {
+            font-family: 'Pacifico', cursive;
+            color: #d81b60;
+            font-size: 1.8em;
+            margin-top: -10px;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+        }
+        p {
+            font-size: 1.15em;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #555;
+            position: relative;
+            z-index: 2;
+        }
+        .firma {
+            font-family: 'Pacifico', cursive;
+            font-size: 1.5em;
+            color: #ad1457;
+            margin-top: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        .imagen-decorativa {
+            max-width: 100px;
+            margin: 15px 10px;
+            vertical-align: middle;
+            filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.1));
+            position: relative;
+            z-index: 2;
+        }
+        .flores-container {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+        .flor {
+            max-width: 80px;
+            margin: 0 10px;
+            filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.1));
+        }
+        .balloon {
+            position: absolute;
+            width: 60px;
+            animation: float 6s ease-in-out infinite;
+            opacity: 0.8;
+            z-index: 0;
+        }
+        .balloon:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+        .balloon:nth-child(2) { top: 20%; right: 8%; animation-delay: 2s; }
+        .balloon:nth-child(3) { bottom: 15%; left: 10%; animation-delay: 4s; }
+        .balloon:nth-child(4) { top: 5%; right: 20%; animation-delay: 1s; }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .codigo-amor {
+            font-family: 'Courier New', monospace;
+            background-color: #fce4ec;
+            padding: 3px 8px;
+            border-radius: 5px;
+            color: #c2185b;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="carta">
+        <img class="balloon" style="left: 5%; top: 10%;" src="images/globo.png" alt="Globo rosa">
+        <img class="balloon" style="right: 8%; top: 20%; animation-delay: 2s;" src="images/globo.png" alt="Globo rosa">
+        <img class="balloon" style="left: 10%; bottom: 15%; animation-delay: 4s;" src="images/globo.png" alt="Globo rosa">
+        <img class="hello-kitty-corner" src="images/hellokitty.png" alt="Hello Kitty">
+        <img class="hello-kitty-corner-bottom" src="images/hellokitty.png" alt="Hello Kitty">
+
+        <audio id="miAudio" src="audio/cancion.mp3" controls></audio>
+
+        <script>
+                let audioElemento = document.getElementById("miAudio");    
+                audioElemento.volume = 0.2; 
+        </script>
+
+        <h1>¡Feliz <span>21</span> Cumpleaños!</h1>
+        <p class="subtitulo">Para mi niña hermosa con ojitos bonitos</p>
+
+        <p>Mi amor,</p>
+        <p>Hoy celebramos tus <span class="codigo-amor">21 años</span>, y mi corazón se llena de alegría al pensar en todo lo que eres. El noble corazón que tienes y los sentimientos mas bonitos.</p>
+
+        <p>Estoy orgulloso de todo lo que te estás esforzando por cumplir tus metas anteponiendolos siempre ante cualquier dificultad que tengas. Siempre lucha por tus sueños, no dejes que nadie te diga que no puedes, los que de verdad te queremos siempre estaremos alentandote en seguir adelante</p>
+
+        <p>En este día tan especial, quiero desearte un muy bonito cumpleaños, que cumplas todos tus sueños y tengamos muchísimos momentos que se conviertan en nuestros <span class="codigo-amor">recuerdos favoritos</span>. Que la vida te siga sonriendo con ese rosa suave que tanto te gusta, y que yo pueda estar ahí para compartirlo.</p>
+
+        <div class="flores-container">
+            <img class="flor" src="images/tulipan.png" alt="Tulipán rosa">
+            <img class="flor" src="images/lirio.png" alt="Lirio blanco">
+            <img class="flor" src="images/tulipan.png" alt="Tulipán rosa">
+        </div>
+
+        <p>Gracias por ser tú, por tu risa, por tu compañía y por ser la mejor parte de mi día. <span class="codigo-amor">Te quiero infinito.</span></p>
+
+        <p class="firma">Con todo mi amor,<br> Tu oso</p>
+    </div>
+</body>
+</html>
